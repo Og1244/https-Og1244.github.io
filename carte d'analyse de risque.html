@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b226172e191df77f34943026a170f492 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b226172e191df77f34943026a170f492" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b226172e191df77f34943026a170f492 = L.map(
+                "map_b226172e191df77f34943026a170f492",
+                {
+                    center: [34.74, 17.05],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_12e398adf47cadbe0ba8288ec551784a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_12e398adf47cadbe0ba8288ec551784a.addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+            var marker_ac4491ceed746fed848c4d25aaa264f0 = L.marker(
+                [16.8661, 96.1951],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_657ce2733d37b1182c5dae3b857c2058 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_0fa7cd3a428153daa093034bb26951ca = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+Q3ljbG9uZSBOYXJnaXMgKDIwMDgpPC9zdHJvbmc+PGJyPgogICAgICA8YSBocmVmPSJodHRwczovL3d3dy5jeWNsb25lb2kuY29tL21lZGlhcy9pbWFnZXMvbmFyZ2lzLmpwZyIgdGFyZ2V0PSJfYmxhbmsiPgogICAgICAgIDxpbWcgc3JjPSJodHRwczovL3d3dy5jeWNsb25lb2kuY29tL21lZGlhcy9pbWFnZXMvbmFyZ2lzLmpwZyIgd2lkdGg9IjE1MCIgc3R5bGU9ImJvcmRlcjoycHggc29saWQgYmxhY2s7Ij4KICAgICAgPC9hPjxicj4KICAgICAgPHNwYW4+Q3JpdMOocmVzOjwvc3Bhbj48dWwgc3R5bGU9J21hcmdpbjowOyBwYWRkaW5nLWxlZnQ6MTVweDsnPjxsaT5QcsOpdmVudGlvbjogNS8yMDwvbGk+PGxpPkltcGFjdCBodW1haW46IDIvMjA8L2xpPjxsaT5Sw6lhY3Rpdml0w6k6IDQvMjA8L2xpPjxsaT5JbmZyYXN0cnVjdHVyZTogMy8yMDwvbGk+PGxpPkhpc3RvcmlxdWU6IDIvMjA8L2xpPjwvdWw+CiAgICAgIDxzcGFuPk5vdGUgbW95ZW5uZSA6IDMuMi8yMDwvc3Bhbj48YnI+CiAgICAgIDxzcGFuIHN0eWxlPSJjb2xvcjpyZWQ7IGZvbnQtd2VpZ2h0OmJvbGQ7Ij7wn5S0IFRyw6hzIHByb2JhYmxlPC9zcGFuPgogICAgPC9kaXY+CiAgICA=" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_657ce2733d37b1182c5dae3b857c2058.setContent(i_frame_0fa7cd3a428153daa093034bb26951ca);
+            
+        
+
+        marker_ac4491ceed746fed848c4d25aaa264f0.bindPopup(popup_657ce2733d37b1182c5dae3b857c2058)
+        ;
+
+        
+    
+    
+            marker_ac4491ceed746fed848c4d25aaa264f0.bindTooltip(
+                `<div>
+                     Cyclone Nargis (2008)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_e8e791b44c3a22302c9b3ab4a3be2948 = L.circle(
+                [16.8661, 96.1951],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_a733d6805fae4d3612900d0b201029f0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3361346255e161a2f424bc55ddf1a03 = $(`<div id="html_c3361346255e161a2f424bc55ddf1a03" style="width: 100.0%; height: 100.0%;">Cyclone Nargis (2008)</div>`)[0];
+                popup_a733d6805fae4d3612900d0b201029f0.setContent(html_c3361346255e161a2f424bc55ddf1a03);
+            
+        
+
+        circle_e8e791b44c3a22302c9b3ab4a3be2948.bindPopup(popup_a733d6805fae4d3612900d0b201029f0)
+        ;
+
+        
+    
+    
+            var marker_bb4f457494198679c0ac7d949a0d5ff4 = L.marker(
+                [-12.0464, -77.0428],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_baae24cc2bd29502e4f1068e2e7aed9c = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_85cd2c86a5a91e417008210b9f1cb0f9 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+RU5TTyAoRWwgTmnDsW8sIDIwMTcpPC9zdHJvbmc+PGJyPgogICAgICA8YSBocmVmPSJodHRwczovL3RoLmJpbmcuY29tL3RoL2lkL1IuMzRmMGFmODQ3OGE1ZmQxYmUxYjZmN2NlZGI0Yzc3MzA/cmlrPVMlMmZEVGRHTmdwamFjJTJidyZyaXU9aHR0cCUzYSUyZiUyZmltZy5hd3MubGEtY3JvaXguY29tJTJmMjAxNyUyZjAzJTJmMzAlMmYxMjAwODM1OTA5JTJmcHJvdmluY2UtUGFpdGEtcmVnaW9uLVBpdXJhLVBlcm91LWVuc2V2ZWxpZWxhLXN1aXRlLXJlY2VudGVzLXBsdWllcy1kaWx1dmllbm5lcy1jYXVzZWVzLXBoZW5vbWVuZS1FbC1OaW5vXzFfMTM5OF85MzEuanBnJmVoaz15SE9RdjVGU0dQZXBYQWdCYjM2SXlzRGJSWHdpZUclMmJ2ZUEyMzhXdVRBMFklM2QmcmlzbD0mcGlkPUltZ1JhdyZyPTAiIHRhcmdldD0iX2JsYW5rIj4KICAgICAgICA8aW1nIHNyYz0iaHR0cHM6Ly90aC5iaW5nLmNvbS90aC9pZC9SLjM0ZjBhZjg0NzhhNWZkMWJlMWI2ZjdjZWRiNGM3NzMwP3Jpaz1TJTJmRFRkR05ncGphYyUyYncmcml1PWh0dHAlM2ElMmYlMmZpbWcuYXdzLmxhLWNyb2l4LmNvbSUyZjIwMTclMmYwMyUyZjMwJTJmMTIwMDgzNTkwOSUyZnByb3ZpbmNlLVBhaXRhLXJlZ2lvbi1QaXVyYS1QZXJvdS1lbnNldmVsaWVsYS1zdWl0ZS1yZWNlbnRlcy1wbHVpZXMtZGlsdXZpZW5uZXMtY2F1c2Vlcy1waGVub21lbmUtRWwtTmlub18xXzEzOThfOTMxLmpwZyZlaGs9eUhPUXY1RlNHUGVwWEFnQmIzNkl5c0RiUlh3aWVHJTJidmVBMjM4V3VUQTBZJTNkJnJpc2w9JnBpZD1JbWdSYXcmcj0wIiB3aWR0aD0iMTUwIiBzdHlsZT0iYm9yZGVyOjJweCBzb2xpZCBibGFjazsiPgogICAgICA8L2E+PGJyPgogICAgICA8c3Bhbj5Dcml0w6hyZXM6PC9zcGFuPjx1bCBzdHlsZT0nbWFyZ2luOjA7IHBhZGRpbmctbGVmdDoxNXB4Oyc+PGxpPlByw6l2ZW50aW9uOiA4LzIwPC9saT48bGk+SW1wYWN0IGh1bWFpbjogNi8yMDwvbGk+PGxpPlLDqWFjdGl2aXTDqTogNy8yMDwvbGk+PGxpPkluZnJhc3RydWN0dXJlOiA2LzIwPC9saT48bGk+SGlzdG9yaXF1ZTogNy8yMDwvbGk+PC91bD4KICAgICAgPHNwYW4+Tm90ZSBtb3llbm5lIDogNi44LzIwPC9zcGFuPjxicj4KICAgICAgPHNwYW4gc3R5bGU9ImNvbG9yOm9yYW5nZTsgZm9udC13ZWlnaHQ6Ym9sZDsiPvCfn6AgUHJvYmFibGU8L3NwYW4+CiAgICA8L2Rpdj4KICAgIA==" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_baae24cc2bd29502e4f1068e2e7aed9c.setContent(i_frame_85cd2c86a5a91e417008210b9f1cb0f9);
+            
+        
+
+        marker_bb4f457494198679c0ac7d949a0d5ff4.bindPopup(popup_baae24cc2bd29502e4f1068e2e7aed9c)
+        ;
+
+        
+    
+    
+            marker_bb4f457494198679c0ac7d949a0d5ff4.bindTooltip(
+                `<div>
+                     ENSO (El Niño, 2017)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_b9029e47265c933b1db0d8bce9ce2fc3 = L.circle(
+                [-12.0464, -77.0428],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_355447aa9d3708995dc9e9a6e2e65ea6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8da295206892d17d25809438d364956e = $(`<div id="html_8da295206892d17d25809438d364956e" style="width: 100.0%; height: 100.0%;">ENSO (El Niño, 2017)</div>`)[0];
+                popup_355447aa9d3708995dc9e9a6e2e65ea6.setContent(html_8da295206892d17d25809438d364956e);
+            
+        
+
+        circle_b9029e47265c933b1db0d8bce9ce2fc3.bindPopup(popup_355447aa9d3708995dc9e9a6e2e65ea6)
+        ;
+
+        
+    
+    
+            var marker_37b14c2b2a986f9e9aa2a16c197ddd03 = L.marker(
+                [50.9375, 6.9603],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_cd2a23edbc5fcfea62be2dbcc43dbb27 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_98606b26da10294424a37a6d0c0a6d69 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+SW5vbmRhdGlvbnMgZW4gQWxsZW1hZ25lICgyMDIxKTwvc3Ryb25nPjxicj4KICAgICAgPGEgaHJlZj0iaHR0cHM6Ly9pbWcubGVtZGUuZnIvMjAyMS8wNy8xNi8wLzAvMzgyNS8yNjIwLzY2NC8wLzc1LzAvYzA0MTBmNl8zOTQ1NTA5NDUtODg3ODY2LmpwZyIgdGFyZ2V0PSJfYmxhbmsiPgogICAgICAgIDxpbWcgc3JjPSJodHRwczovL2ltZy5sZW1kZS5mci8yMDIxLzA3LzE2LzAvMC8zODI1LzI2MjAvNjY0LzAvNzUvMC9jMDQxMGY2XzM5NDU1MDk0NS04ODc4NjYuanBnIiB3aWR0aD0iMTUwIiBzdHlsZT0iYm9yZGVyOjJweCBzb2xpZCBibGFjazsiPgogICAgICA8L2E+PGJyPgogICAgICA8c3Bhbj5Dcml0w6hyZXM6PC9zcGFuPjx1bCBzdHlsZT0nbWFyZ2luOjA7IHBhZGRpbmctbGVmdDoxNXB4Oyc+PGxpPlByw6l2ZW50aW9uOiAxMC8yMDwvbGk+PGxpPkltcGFjdCBodW1haW46IDgvMjA8L2xpPjxsaT5Sw6lhY3Rpdml0w6k6IDEyLzIwPC9saT48bGk+SW5mcmFzdHJ1Y3R1cmU6IDE0LzIwPC9saT48bGk+SGlzdG9yaXF1ZTogOS8yMDwvbGk+PC91bD4KICAgICAgPHNwYW4+Tm90ZSBtb3llbm5lIDogMTAuNi8yMDwvc3Bhbj48YnI+CiAgICAgIDxzcGFuIHN0eWxlPSJjb2xvcjp5ZWxsb3c7IGZvbnQtd2VpZ2h0OmJvbGQ7Ij7wn5+hIE1veWVubmVtZW50IHByb2JhYmxlPC9zcGFuPgogICAgPC9kaXY+CiAgICA=" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_cd2a23edbc5fcfea62be2dbcc43dbb27.setContent(i_frame_98606b26da10294424a37a6d0c0a6d69);
+            
+        
+
+        marker_37b14c2b2a986f9e9aa2a16c197ddd03.bindPopup(popup_cd2a23edbc5fcfea62be2dbcc43dbb27)
+        ;
+
+        
+    
+    
+            marker_37b14c2b2a986f9e9aa2a16c197ddd03.bindTooltip(
+                `<div>
+                     Inondations en Allemagne (2021)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_98756fc8cc17ea8b0645f11fe4ac0c0c = L.circle(
+                [50.9375, 6.9603],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_c84ab4651d08f278ee3d1e8b94f736ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e502ec0d01546a7cb5eccfb4ace9446a = $(`<div id="html_e502ec0d01546a7cb5eccfb4ace9446a" style="width: 100.0%; height: 100.0%;">Inondations en Allemagne (2021)</div>`)[0];
+                popup_c84ab4651d08f278ee3d1e8b94f736ec.setContent(html_e502ec0d01546a7cb5eccfb4ace9446a);
+            
+        
+
+        circle_98756fc8cc17ea8b0645f11fe4ac0c0c.bindPopup(popup_c84ab4651d08f278ee3d1e8b94f736ec)
+        ;
+
+        
+    
+    
+            var marker_4357ca0b186edda30b96e1da8fc4c44e = L.marker(
+                [-33.8688, 151.2093],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_1f7caee58cc47c983edce4591676c213 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_52a42a6147c11ae01b16cfe05ff81987 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+U8OpY2hlcmVzc2UgZXQgZmV1eCBkZSBmb3LDqnQgZW4gQXVzdHJhbGllICgyMDE5KTwvc3Ryb25nPjxicj4KICAgICAgPGEgaHJlZj0iaHR0cHM6Ly9pbWFnZXMubGVzaW5kZXNyYWRpb3MuZnIvZml0LWluLzExMDB4MjAwMC9maWx0ZXJzOmZvcm1hdCh3ZWJwKS9yYWRpb3MvYWxvdWV0dGUvaW1wb3J0cmsvbmV3cy9vcmlnaW5hbC81ZTE1OTczMGNlNmMyMy4wNTM3NzMwMC5wbmciIHRhcmdldD0iX2JsYW5rIj4KICAgICAgICA8aW1nIHNyYz0iaHR0cHM6Ly9pbWFnZXMubGVzaW5kZXNyYWRpb3MuZnIvZml0LWluLzExMDB4MjAwMC9maWx0ZXJzOmZvcm1hdCh3ZWJwKS9yYWRpb3MvYWxvdWV0dGUvaW1wb3J0cmsvbmV3cy9vcmlnaW5hbC81ZTE1OTczMGNlNmMyMy4wNTM3NzMwMC5wbmciIHdpZHRoPSIxNTAiIHN0eWxlPSJib3JkZXI6MnB4IHNvbGlkIGJsYWNrOyI+CiAgICAgIDwvYT48YnI+CiAgICAgIDxzcGFuPkNyaXTDqHJlczo8L3NwYW4+PHVsIHN0eWxlPSdtYXJnaW46MDsgcGFkZGluZy1sZWZ0OjE1cHg7Jz48bGk+UHLDqXZlbnRpb246IDcvMjA8L2xpPjxsaT5JbXBhY3QgaHVtYWluOiA1LzIwPC9saT48bGk+UsOpYWN0aXZpdMOpOiA2LzIwPC9saT48bGk+SW5mcmFzdHJ1Y3R1cmU6IDYvMjA8L2xpPjxsaT5IaXN0b3JpcXVlOiA4LzIwPC9saT48L3VsPgogICAgICA8c3Bhbj5Ob3RlIG1veWVubmUgOiA2LjQvMjA8L3NwYW4+PGJyPgogICAgICA8c3BhbiBzdHlsZT0iY29sb3I6b3JhbmdlOyBmb250LXdlaWdodDpib2xkOyI+8J+foCBQcm9iYWJsZTwvc3Bhbj4KICAgIDwvZGl2PgogICAg" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_1f7caee58cc47c983edce4591676c213.setContent(i_frame_52a42a6147c11ae01b16cfe05ff81987);
+            
+        
+
+        marker_4357ca0b186edda30b96e1da8fc4c44e.bindPopup(popup_1f7caee58cc47c983edce4591676c213)
+        ;
+
+        
+    
+    
+            marker_4357ca0b186edda30b96e1da8fc4c44e.bindTooltip(
+                `<div>
+                     Sécheresse et feux de forêt en Australie (2019)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_a2ef7ac9dc2f3be46bd6b2ae6763d5cb = L.circle(
+                [-33.8688, 151.2093],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_8cd630367b3144380fbc396cf0580e9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_be2a48aaabf23ae52c0906074204d27b = $(`<div id="html_be2a48aaabf23ae52c0906074204d27b" style="width: 100.0%; height: 100.0%;">Sécheresse et feux de forêt en Australie (2019)</div>`)[0];
+                popup_8cd630367b3144380fbc396cf0580e9d.setContent(html_be2a48aaabf23ae52c0906074204d27b);
+            
+        
+
+        circle_a2ef7ac9dc2f3be46bd6b2ae6763d5cb.bindPopup(popup_8cd630367b3144380fbc396cf0580e9d)
+        ;
+
+        
+    
+    
+            var marker_78c747e29c8ca220a3c00580c8a9c0fb = L.marker(
+                [35.4676, -97.5164],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_fac871608e305d6a9defb14c4d745c61 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_6c16fb2972c6d9def7c9dcbd3bc5f3d5 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+VG9ybmFkZXMgZW4gT2tsYWhvbWEgKDIwMTMpPC9zdHJvbmc+PGJyPgogICAgICA8YSBocmVmPSJodHRwczovL2kucGluaW1nLmNvbS83MzZ4L2Y4LzA1LzE2L2Y4MDUxNmQ4NDliNmRjOWY2MTg4ZjllMWY0YjRiNGRjLmpwZyIgdGFyZ2V0PSJfYmxhbmsiPgogICAgICAgIDxpbWcgc3JjPSJodHRwczovL2kucGluaW1nLmNvbS83MzZ4L2Y4LzA1LzE2L2Y4MDUxNmQ4NDliNmRjOWY2MTg4ZjllMWY0YjRiNGRjLmpwZyIgd2lkdGg9IjE1MCIgc3R5bGU9ImJvcmRlcjoycHggc29saWQgYmxhY2s7Ij4KICAgICAgPC9hPjxicj4KICAgICAgPHNwYW4+Q3JpdMOocmVzOjwvc3Bhbj48dWwgc3R5bGU9J21hcmdpbjowOyBwYWRkaW5nLWxlZnQ6MTVweDsnPjxsaT5QcsOpdmVudGlvbjogMTQvMjA8L2xpPjxsaT5JbXBhY3QgaHVtYWluOiA5LzIwPC9saT48bGk+UsOpYWN0aXZpdMOpOiAxMy8yMDwvbGk+PGxpPkluZnJhc3RydWN0dXJlOiAxMi8yMDwvbGk+PGxpPkhpc3RvcmlxdWU6IDEwLzIwPC9saT48L3VsPgogICAgICA8c3Bhbj5Ob3RlIG1veWVubmUgOiAxMS42LzIwPC9zcGFuPjxicj4KICAgICAgPHNwYW4gc3R5bGU9ImNvbG9yOnllbGxvdzsgZm9udC13ZWlnaHQ6Ym9sZDsiPvCfn6EgTW95ZW5uZW1lbnQgcHJvYmFibGU8L3NwYW4+CiAgICA8L2Rpdj4KICAgIA==" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_fac871608e305d6a9defb14c4d745c61.setContent(i_frame_6c16fb2972c6d9def7c9dcbd3bc5f3d5);
+            
+        
+
+        marker_78c747e29c8ca220a3c00580c8a9c0fb.bindPopup(popup_fac871608e305d6a9defb14c4d745c61)
+        ;
+
+        
+    
+    
+            marker_78c747e29c8ca220a3c00580c8a9c0fb.bindTooltip(
+                `<div>
+                     Tornades en Oklahoma (2013)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_caa2872911b03ea07cbf7a5574aed8ed = L.circle(
+                [35.4676, -97.5164],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_ab0b3643a9f9ad8c053686155af9cc6c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_becb93f3b8df65684bdd7503fca9b39e = $(`<div id="html_becb93f3b8df65684bdd7503fca9b39e" style="width: 100.0%; height: 100.0%;">Tornades en Oklahoma (2013)</div>`)[0];
+                popup_ab0b3643a9f9ad8c053686155af9cc6c.setContent(html_becb93f3b8df65684bdd7503fca9b39e);
+            
+        
+
+        circle_caa2872911b03ea07cbf7a5574aed8ed.bindPopup(popup_ab0b3643a9f9ad8c053686155af9cc6c)
+        ;
+
+        
+    
+    
+            var marker_713058782cb58613b29cac107442eacf = L.marker(
+                [48.8566, 2.3522],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_203b8c517d0ad68eccc44449998a197a = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_3b722c8f130485dc0d9a1220bc0033f5 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+VmFndWUgZGUgY2hhbGV1ciBlbiBGcmFuY2UgKDIwMjIpPC9zdHJvbmc+PGJyPgogICAgICA8YSBocmVmPSJodHRwczovL2Nkbi5zdGF0Y2RuLmNvbS9JbmZvZ3JhcGhpYy9pbWFnZXMvbm9ybWFsLzE4NDgxLmpwZWciIHRhcmdldD0iX2JsYW5rIj4KICAgICAgICA8aW1nIHNyYz0iaHR0cHM6Ly9jZG4uc3RhdGNkbi5jb20vSW5mb2dyYXBoaWMvaW1hZ2VzL25vcm1hbC8xODQ4MS5qcGVnIiB3aWR0aD0iMTUwIiBzdHlsZT0iYm9yZGVyOjJweCBzb2xpZCBibGFjazsiPgogICAgICA8L2E+PGJyPgogICAgICA8c3Bhbj5Dcml0w6hyZXM6PC9zcGFuPjx1bCBzdHlsZT0nbWFyZ2luOjA7IHBhZGRpbmctbGVmdDoxNXB4Oyc+PGxpPlByw6l2ZW50aW9uOiAxMi8yMDwvbGk+PGxpPkltcGFjdCBodW1haW46IDcvMjA8L2xpPjxsaT5Sw6lhY3Rpdml0w6k6IDExLzIwPC9saT48bGk+SW5mcmFzdHJ1Y3R1cmU6IDEwLzIwPC9saT48bGk+SGlzdG9yaXF1ZTogOS8yMDwvbGk+PC91bD4KICAgICAgPHNwYW4+Tm90ZSBtb3llbm5lIDogOS44LzIwPC9zcGFuPjxicj4KICAgICAgPHNwYW4gc3R5bGU9ImNvbG9yOm9yYW5nZTsgZm9udC13ZWlnaHQ6Ym9sZDsiPvCfn6AgUHJvYmFibGU8L3NwYW4+CiAgICA8L2Rpdj4KICAgIA==" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_203b8c517d0ad68eccc44449998a197a.setContent(i_frame_3b722c8f130485dc0d9a1220bc0033f5);
+            
+        
+
+        marker_713058782cb58613b29cac107442eacf.bindPopup(popup_203b8c517d0ad68eccc44449998a197a)
+        ;
+
+        
+    
+    
+            marker_713058782cb58613b29cac107442eacf.bindTooltip(
+                `<div>
+                     Vague de chaleur en France (2022)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_c5ddac5a45664c786100e7899cb088f0 = L.circle(
+                [48.8566, 2.3522],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_746ccb64d8e7e7465fbcc7368e077074 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4d46e639ab599d7cc42e9f1cb315d76 = $(`<div id="html_a4d46e639ab599d7cc42e9f1cb315d76" style="width: 100.0%; height: 100.0%;">Vague de chaleur en France (2022)</div>`)[0];
+                popup_746ccb64d8e7e7465fbcc7368e077074.setContent(html_a4d46e639ab599d7cc42e9f1cb315d76);
+            
+        
+
+        circle_c5ddac5a45664c786100e7899cb088f0.bindPopup(popup_746ccb64d8e7e7465fbcc7368e077074)
+        ;
+
+        
+    
+    
+            var marker_300a75e8e740a3bc53defac43e027dd8 = L.marker(
+                [39.4704, -0.3777],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_c5b68ae67a9bd644b6a19eea1366ef22 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_2f29eed95a57dd1db498c425183a77a8 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+SW5vbmRhdGlvbiBhIFZhbGVuY2UgKDIwMjQpPC9zdHJvbmc+PGJyPgogICAgICA8YSBocmVmPSJodHRwczovL3N0YXRpYy5ldXJvbmV3cy5jb20vYXJ0aWNsZXMvc3Rvcmllcy8wOC84Mi8yOS85Mi8xMjAweDY3NV9jbXN2Ml9kYzk2YTAwMy1mM2E1LTVlY2EtOGFiZS01ZTVkN2I4YTAyOGQtODgyMjk5Mi5qcGciIHRhcmdldD0iX2JsYW5rIj4KICAgICAgICA8aW1nIHNyYz0iaHR0cHM6Ly9zdGF0aWMuZXVyb25ld3MuY29tL2FydGljbGVzL3N0b3JpZXMvMDgvODIvMjkvOTIvMTIwMHg2NzVfY21zdjJfZGM5NmEwMDMtZjNhNS01ZWNhLThhYmUtNWU1ZDdiOGEwMjhkLTg4MjI5OTIuanBnIiB3aWR0aD0iMTUwIiBzdHlsZT0iYm9yZGVyOjJweCBzb2xpZCBibGFjazsiPgogICAgICA8L2E+PGJyPgogICAgICA8c3Bhbj5Dcml0w6hyZXM6PC9zcGFuPjx1bCBzdHlsZT0nbWFyZ2luOjA7IHBhZGRpbmctbGVmdDoxNXB4Oyc+PGxpPlByw6l2ZW50aW9uOiAxMS8yMDwvbGk+PGxpPkltcGFjdCBodW1haW46IDYvMjA8L2xpPjxsaT5Sw6lhY3Rpdml0w6k6IDEwLzIwPC9saT48bGk+SW5mcmFzdHJ1Y3R1cmU6IDkvMjA8L2xpPjxsaT5IaXN0b3JpcXVlOiA3LzIwPC9saT48L3VsPgogICAgICA8c3Bhbj5Ob3RlIG1veWVubmUgOiA4LjYvMjA8L3NwYW4+PGJyPgogICAgICA8c3BhbiBzdHlsZT0iY29sb3I6b3JhbmdlOyBmb250LXdlaWdodDpib2xkOyI+8J+foCBQcm9iYWJsZTwvc3Bhbj4KICAgIDwvZGl2PgogICAg" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_c5b68ae67a9bd644b6a19eea1366ef22.setContent(i_frame_2f29eed95a57dd1db498c425183a77a8);
+            
+        
+
+        marker_300a75e8e740a3bc53defac43e027dd8.bindPopup(popup_c5b68ae67a9bd644b6a19eea1366ef22)
+        ;
+
+        
+    
+    
+            marker_300a75e8e740a3bc53defac43e027dd8.bindTooltip(
+                `<div>
+                     Inondation a Valence (2024)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_1c8b48e9e17797e8cb665d34314cdd55 = L.circle(
+                [39.4704, -0.3777],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_f7601133621430c63cd7899aa4df8626 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d44bd6f282c13c17b6c781dc818f1ac4 = $(`<div id="html_d44bd6f282c13c17b6c781dc818f1ac4" style="width: 100.0%; height: 100.0%;">Inondation a Valence (2024)</div>`)[0];
+                popup_f7601133621430c63cd7899aa4df8626.setContent(html_d44bd6f282c13c17b6c781dc818f1ac4);
+            
+        
+
+        circle_1c8b48e9e17797e8cb665d34314cdd55.bindPopup(popup_f7601133621430c63cd7899aa4df8626)
+        ;
+
+        
+    
+    
+            var marker_509e98445c8684cb70914fea5fee2e01 = L.marker(
+                [46.2276, 2.2137],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_5876aaaff0ee546f76af3961b050c4de = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_b1429ca4c1ab63116b605e977495e405 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+VGVtcMOqdGUgWHludGhpYSAoMjAxMCk8L3N0cm9uZz48YnI+CiAgICAgIDxhIGhyZWY9Imh0dHBzOi8vd3d3LmZyYW5jZXR2aW5mby5mci9waWN0dXJlcy9qTVBQMHZYaTFLdlA2SkhraTJxZWdFLUI4T2cvMHgyNjo1MTJ4MzY3LzEwMjR4NTc2L2ZpbHRlcnM6Zm9ybWF0KGF2aWYpOnF1YWxpdHkoNTApLzIwMTMvMDIvMDgvQlJPQURING9iY0UuanBnIiB0YXJnZXQ9Il9ibGFuayI+CiAgICAgICAgPGltZyBzcmM9Imh0dHBzOi8vd3d3LmZyYW5jZXR2aW5mby5mci9waWN0dXJlcy9qTVBQMHZYaTFLdlA2SkhraTJxZWdFLUI4T2cvMHgyNjo1MTJ4MzY3LzEwMjR4NTc2L2ZpbHRlcnM6Zm9ybWF0KGF2aWYpOnF1YWxpdHkoNTApLzIwMTMvMDIvMDgvQlJPQURING9iY0UuanBnIiB3aWR0aD0iMTUwIiBzdHlsZT0iYm9yZGVyOjJweCBzb2xpZCBibGFjazsiPgogICAgICA8L2E+PGJyPgogICAgICA8c3Bhbj5Dcml0w6hyZXM6PC9zcGFuPjx1bCBzdHlsZT0nbWFyZ2luOjA7IHBhZGRpbmctbGVmdDoxNXB4Oyc+PGxpPlByw6l2ZW50aW9uOiAxMC8yMDwvbGk+PGxpPkltcGFjdCBodW1haW46IDcvMjA8L2xpPjxsaT5Sw6lhY3Rpdml0w6k6IDExLzIwPC9saT48bGk+SW5mcmFzdHJ1Y3R1cmU6IDEyLzIwPC9saT48bGk+SGlzdG9yaXF1ZTogOC8yMDwvbGk+PC91bD4KICAgICAgPHNwYW4+Tm90ZSBtb3llbm5lIDogOS42LzIwPC9zcGFuPjxicj4KICAgICAgPHNwYW4gc3R5bGU9ImNvbG9yOm9yYW5nZTsgZm9udC13ZWlnaHQ6Ym9sZDsiPvCfn6AgUHJvYmFibGU8L3NwYW4+CiAgICA8L2Rpdj4KICAgIA==" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_5876aaaff0ee546f76af3961b050c4de.setContent(i_frame_b1429ca4c1ab63116b605e977495e405);
+            
+        
+
+        marker_509e98445c8684cb70914fea5fee2e01.bindPopup(popup_5876aaaff0ee546f76af3961b050c4de)
+        ;
+
+        
+    
+    
+            marker_509e98445c8684cb70914fea5fee2e01.bindTooltip(
+                `<div>
+                     Tempête Xynthia (2010)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_b5c31304366235609bafee996767dbfa = L.circle(
+                [46.2276, 2.2137],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_b451e84a50e616cec726e71fff6ee0af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9e0b63cca1f22c13620b4f40c55a69c3 = $(`<div id="html_9e0b63cca1f22c13620b4f40c55a69c3" style="width: 100.0%; height: 100.0%;">Tempête Xynthia (2010)</div>`)[0];
+                popup_b451e84a50e616cec726e71fff6ee0af.setContent(html_9e0b63cca1f22c13620b4f40c55a69c3);
+            
+        
+
+        circle_b5c31304366235609bafee996767dbfa.bindPopup(popup_b451e84a50e616cec726e71fff6ee0af)
+        ;
+
+        
+    
+    
+            var marker_b9299f9e24633870e6b22b078cab7b50 = L.marker(
+                [55.7558, 37.6173],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_ff2b8c5460398bf272244c9e2a96e421 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_fa81e8195558da7deff6711c2e59e605 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+VmFndWUgZGUgZnJvaWQgZW4gUnVzc2llICgyMDEwKTwvc3Ryb25nPjxicj4KICAgICAgPGEgaHJlZj0iaHR0cHM6Ly9tZWRpYS5zdWRvdWVzdC5mci85MDM3NTI4LzEwMDB4NTAwL3NvLTU3ZWNjYzYxNjZhNGJkZmI3Y2U0YTMxYy1waDAuanBnP3Y9MTM1NTgzODQzMSIgdGFyZ2V0PSJfYmxhbmsiPgogICAgICAgIDxpbWcgc3JjPSJodHRwczovL21lZGlhLnN1ZG91ZXN0LmZyLzkwMzc1MjgvMTAwMHg1MDAvc28tNTdlY2NjNjE2NmE0YmRmYjdjZTRhMzFjLXBoMC5qcGc/dj0xMzU1ODM4NDMxIiB3aWR0aD0iMTUwIiBzdHlsZT0iYm9yZGVyOjJweCBzb2xpZCBibGFjazsiPgogICAgICA8L2E+PGJyPgogICAgICA8c3Bhbj5Dcml0w6hyZXM6PC9zcGFuPjx1bCBzdHlsZT0nbWFyZ2luOjA7IHBhZGRpbmctbGVmdDoxNXB4Oyc+PGxpPlByw6l2ZW50aW9uOiA4LzIwPC9saT48bGk+SW1wYWN0IGh1bWFpbjogNS8yMDwvbGk+PGxpPlLDqWFjdGl2aXTDqTogOS8yMDwvbGk+PGxpPkluZnJhc3RydWN0dXJlOiA3LzIwPC9saT48bGk+SGlzdG9yaXF1ZTogNi8yMDwvbGk+PC91bD4KICAgICAgPHNwYW4+Tm90ZSBtb3llbm5lIDogNy4wLzIwPC9zcGFuPjxicj4KICAgICAgPHNwYW4gc3R5bGU9ImNvbG9yOm9yYW5nZTsgZm9udC13ZWlnaHQ6Ym9sZDsiPvCfn6AgUHJvYmFibGU8L3NwYW4+CiAgICA8L2Rpdj4KICAgIA==" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_ff2b8c5460398bf272244c9e2a96e421.setContent(i_frame_fa81e8195558da7deff6711c2e59e605);
+            
+        
+
+        marker_b9299f9e24633870e6b22b078cab7b50.bindPopup(popup_ff2b8c5460398bf272244c9e2a96e421)
+        ;
+
+        
+    
+    
+            marker_b9299f9e24633870e6b22b078cab7b50.bindTooltip(
+                `<div>
+                     Vague de froid en Russie (2010)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_f5ff25ebd81385743ac0e5501752c60b = L.circle(
+                [55.7558, 37.6173],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_d35c2cd1705121cee47ad3d04cc91503 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fbf9d6da18de0da7c91b0cc33a2bd4ca = $(`<div id="html_fbf9d6da18de0da7c91b0cc33a2bd4ca" style="width: 100.0%; height: 100.0%;">Vague de froid en Russie (2010)</div>`)[0];
+                popup_d35c2cd1705121cee47ad3d04cc91503.setContent(html_fbf9d6da18de0da7c91b0cc33a2bd4ca);
+            
+        
+
+        circle_f5ff25ebd81385743ac0e5501752c60b.bindPopup(popup_d35c2cd1705121cee47ad3d04cc91503)
+        ;
+
+        
+    
+    
+            var marker_df03cea3b498ba89f8e2c33766193d9a = L.marker(
+                [0.0, 0.0],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_3e7e5aaec4e9c11ce0412ac10e722740 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_dddd55ac34ca53547d75db269d6e70a4 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+w4lwaWTDqW1pZSBDT1ZJRC0xOSAoMjAxOS0yMDIxKTwvc3Ryb25nPjxicj4KICAgICAgPGEgaHJlZj0iaHR0cHM6Ly93d3cuYXJ0aWNxdWUuY29tL3dwLWNvbnRlbnQvdXBsb2Fkcy8yMDIyLzAxL2NhcnRlLW1vbmRpYWxlLWRlLWxlcGlkZW1pZS1kZS1jb3JvbmF2aXJ1cy0xMDMweDU1Ni5qcGcud2VicCIgdGFyZ2V0PSJfYmxhbmsiPgogICAgICAgIDxpbWcgc3JjPSJodHRwczovL3d3dy5hcnRpY3F1ZS5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMjIvMDEvY2FydGUtbW9uZGlhbGUtZGUtbGVwaWRlbWllLWRlLWNvcm9uYXZpcnVzLTEwMzB4NTU2LmpwZy53ZWJwIiB3aWR0aD0iMTUwIiBzdHlsZT0iYm9yZGVyOjJweCBzb2xpZCBibGFjazsiPgogICAgICA8L2E+PGJyPgogICAgICA8c3Bhbj5Dcml0w6hyZXM6PC9zcGFuPjx1bCBzdHlsZT0nbWFyZ2luOjA7IHBhZGRpbmctbGVmdDoxNXB4Oyc+PGxpPlByw6l2ZW50aW9uOiA2LzIwPC9saT48bGk+SW1wYWN0IGh1bWFpbjogMi8yMDwvbGk+PGxpPlLDqWFjdGl2aXTDqTogNS8yMDwvbGk+PGxpPkluZnJhc3RydWN0dXJlOiAzLzIwPC9saT48bGk+SGlzdG9yaXF1ZTogMS8yMDwvbGk+PC91bD4KICAgICAgPHNwYW4+Tm90ZSBtb3llbm5lIDogMy40LzIwPC9zcGFuPjxicj4KICAgICAgPHNwYW4gc3R5bGU9ImNvbG9yOnJlZDsgZm9udC13ZWlnaHQ6Ym9sZDsiPvCflLQgVHLDqHMgcHJvYmFibGU8L3NwYW4+CiAgICA8L2Rpdj4KICAgIA==" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_3e7e5aaec4e9c11ce0412ac10e722740.setContent(i_frame_dddd55ac34ca53547d75db269d6e70a4);
+            
+        
+
+        marker_df03cea3b498ba89f8e2c33766193d9a.bindPopup(popup_3e7e5aaec4e9c11ce0412ac10e722740)
+        ;
+
+        
+    
+    
+            marker_df03cea3b498ba89f8e2c33766193d9a.bindTooltip(
+                `<div>
+                     Épidémie COVID-19 (2019-2021)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_4dfb54b0ed729563e6bb3ad9a8d09b7a = L.circle(
+                [0.0, 0.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_475444a627f60716708e7f697a57b2b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57a844f7a0a39b97eb57176f456e8c01 = $(`<div id="html_57a844f7a0a39b97eb57176f456e8c01" style="width: 100.0%; height: 100.0%;">Épidémie COVID-19 (2019-2021)</div>`)[0];
+                popup_475444a627f60716708e7f697a57b2b7.setContent(html_57a844f7a0a39b97eb57176f456e8c01);
+            
+        
+
+        circle_4dfb54b0ed729563e6bb3ad9a8d09b7a.bindPopup(popup_475444a627f60716708e7f697a57b2b7)
+        ;
+
+        
+    
+    
+            var marker_ed61e1dc334a2a18f4841983648d8639 = L.marker(
+                [39.9042, 116.4074],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_f20feee484b9e19cc32ef676990262d1 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_ef179fb4da7ae1bb44c97bde9bff68a6 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+w4lwaWTDqW1pZSBkZSBncmlwcGUgYXZpYWlyZSBlbiBDaGluZSAoMjAwNSk8L3N0cm9uZz48YnI+CiAgICAgIDxhIGhyZWY9Imh0dHBzOi8vaS5mMWcuZnIvbWVkaWEvY21zLzcwNHgzOTZfY3JvcHVwc2NhbGUvMjAyNS8wMS8wNy9jNTc3MzIzZjE4ODkxOTAxZjJjOWQyMjIyZGJiZjYyYjA5NjZhZmI0MDZhY2NhMWY1NTA3Mzk2NTg0ZWVkYzI4LmpwZyIgdGFyZ2V0PSJfYmxhbmsiPgogICAgICAgIDxpbWcgc3JjPSJodHRwczovL2kuZjFnLmZyL21lZGlhL2Ntcy83MDR4Mzk2X2Nyb3B1cHNjYWxlLzIwMjUvMDEvMDcvYzU3NzMyM2YxODg5MTkwMWYyYzlkMjIyMmRiYmY2MmIwOTY2YWZiNDA2YWNjYTFmNTUwNzM5NjU4NGVlZGMyOC5qcGciIHdpZHRoPSIxNTAiIHN0eWxlPSJib3JkZXI6MnB4IHNvbGlkIGJsYWNrOyI+CiAgICAgIDwvYT48YnI+CiAgICAgIDxzcGFuPkNyaXTDqHJlczo8L3NwYW4+PHVsIHN0eWxlPSdtYXJnaW46MDsgcGFkZGluZy1sZWZ0OjE1cHg7Jz48bGk+UHLDqXZlbnRpb246IDkvMjA8L2xpPjxsaT5JbXBhY3QgaHVtYWluOiA1LzIwPC9saT48bGk+UsOpYWN0aXZpdMOpOiA3LzIwPC9saT48bGk+SW5mcmFzdHJ1Y3R1cmU6IDYvMjA8L2xpPjxsaT5IaXN0b3JpcXVlOiA0LzIwPC9saT48L3VsPgogICAgICA8c3Bhbj5Ob3RlIG1veWVubmUgOiA2LjIvMjA8L3NwYW4+PGJyPgogICAgICA8c3BhbiBzdHlsZT0iY29sb3I6b3JhbmdlOyBmb250LXdlaWdodDpib2xkOyI+8J+foCBQcm9iYWJsZTwvc3Bhbj4KICAgIDwvZGl2PgogICAg" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_f20feee484b9e19cc32ef676990262d1.setContent(i_frame_ef179fb4da7ae1bb44c97bde9bff68a6);
+            
+        
+
+        marker_ed61e1dc334a2a18f4841983648d8639.bindPopup(popup_f20feee484b9e19cc32ef676990262d1)
+        ;
+
+        
+    
+    
+            marker_ed61e1dc334a2a18f4841983648d8639.bindTooltip(
+                `<div>
+                     Épidémie de grippe aviaire en Chine (2005)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_69376292c99b291081a3846fc6977c67 = L.circle(
+                [39.9042, 116.4074],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_eb42613d3c735790bbb7d707ca588352 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28d7ac17ddd635681f724cd79859fc7a = $(`<div id="html_28d7ac17ddd635681f724cd79859fc7a" style="width: 100.0%; height: 100.0%;">Épidémie de grippe aviaire en Chine (2005)</div>`)[0];
+                popup_eb42613d3c735790bbb7d707ca588352.setContent(html_28d7ac17ddd635681f724cd79859fc7a);
+            
+        
+
+        circle_69376292c99b291081a3846fc6977c67.bindPopup(popup_eb42613d3c735790bbb7d707ca588352)
+        ;
+
+        
+    
+    
+            var marker_076fca1c17fd4a759ef4888dcd1d5f77 = L.marker(
+                [-1.286389, 36.817223],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_be38d44ffe181ff079900642c218bac1 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_84ae9f9e212361c3272e787925382f2c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+SW52YXNpb24gZGUgY3JpcXVldHMgYXUgS2VueWEgKDIwMjApPC9zdHJvbmc+PGJyPgogICAgICA8YSBocmVmPSJodHRwczovL2VuY3J5cHRlZC10Ym4wLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NSRVhzbHFYV2xfRUp2RzhXMjY3UE91M01xOGdyME1RUmpWTncmcyIgdGFyZ2V0PSJfYmxhbmsiPgogICAgICAgIDxpbWcgc3JjPSJodHRwczovL2VuY3J5cHRlZC10Ym4wLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NSRVhzbHFYV2xfRUp2RzhXMjY3UE91M01xOGdyME1RUmpWTncmcyIgd2lkdGg9IjE1MCIgc3R5bGU9ImJvcmRlcjoycHggc29saWQgYmxhY2s7Ij4KICAgICAgPC9hPjxicj4KICAgICAgPHNwYW4+Q3JpdMOocmVzOjwvc3Bhbj48dWwgc3R5bGU9J21hcmdpbjowOyBwYWRkaW5nLWxlZnQ6MTVweDsnPjxsaT5QcsOpdmVudGlvbjogNy8yMDwvbGk+PGxpPkltcGFjdCBodW1haW46IDUvMjA8L2xpPjxsaT5Sw6lhY3Rpdml0w6k6IDYvMjA8L2xpPjxsaT5JbmZyYXN0cnVjdHVyZTogNi8yMDwvbGk+PGxpPkhpc3RvcmlxdWU6IDgvMjA8L2xpPjwvdWw+CiAgICAgIDxzcGFuPk5vdGUgbW95ZW5uZSA6IDYuNC8yMDwvc3Bhbj48YnI+CiAgICAgIDxzcGFuIHN0eWxlPSJjb2xvcjpvcmFuZ2U7IGZvbnQtd2VpZ2h0OmJvbGQ7Ij7wn5+gIFByb2JhYmxlPC9zcGFuPgogICAgPC9kaXY+CiAgICA=" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_be38d44ffe181ff079900642c218bac1.setContent(i_frame_84ae9f9e212361c3272e787925382f2c);
+            
+        
+
+        marker_076fca1c17fd4a759ef4888dcd1d5f77.bindPopup(popup_be38d44ffe181ff079900642c218bac1)
+        ;
+
+        
+    
+    
+            marker_076fca1c17fd4a759ef4888dcd1d5f77.bindTooltip(
+                `<div>
+                     Invasion de criquets au Kenya (2020)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_585daa29c6fd92f6c95f547739b4de7e = L.circle(
+                [-1.286389, 36.817223],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_9fe344bd8255b88e23414b3c24974cd0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6af4bd840c672954b6e1bbe2a87ea63 = $(`<div id="html_d6af4bd840c672954b6e1bbe2a87ea63" style="width: 100.0%; height: 100.0%;">Invasion de criquets au Kenya (2020)</div>`)[0];
+                popup_9fe344bd8255b88e23414b3c24974cd0.setContent(html_d6af4bd840c672954b6e1bbe2a87ea63);
+            
+        
+
+        circle_585daa29c6fd92f6c95f547739b4de7e.bindPopup(popup_9fe344bd8255b88e23414b3c24974cd0)
+        ;
+
+        
+    
+    
+            var marker_d99181e034ae5b9348955e0a2c9fafbf = L.marker(
+                [55.1644, 61.4368],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_569c94c2ba82eebba97e0a82a7a95b1e = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_ef7ea5a5602f6d99d12eafa218989383 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+Q2h1dGUgZGUgbcOpdMOpb3JpdGUgZGUgVGNoZWxpYWJpbnNrICgyMDEzKTwvc3Ryb25nPjxicj4KICAgICAgPGEgaHJlZj0iaHR0cHM6Ly93d3cubm90cmUtcGxhbmV0ZS5pbmZvL2FjdHVhbGl0ZXMvaW1hZ2VzL2FzdHJvbm9taWUvVGNoZWxpYWJpbnNrLW1ldGVvcmUtdHJhaW5lZS53ZWJwIiB0YXJnZXQ9Il9ibGFuayI+CiAgICAgICAgPGltZyBzcmM9Imh0dHBzOi8vd3d3Lm5vdHJlLXBsYW5ldGUuaW5mby9hY3R1YWxpdGVzL2ltYWdlcy9hc3Ryb25vbWllL1RjaGVsaWFiaW5zay1tZXRlb3JlLXRyYWluZWUud2VicCIgd2lkdGg9IjE1MCIgc3R5bGU9ImJvcmRlcjoycHggc29saWQgYmxhY2s7Ij4KICAgICAgPC9hPjxicj4KICAgICAgPHNwYW4+Q3JpdMOocmVzOjwvc3Bhbj48dWwgc3R5bGU9J21hcmdpbjowOyBwYWRkaW5nLWxlZnQ6MTVweDsnPjxsaT5QcsOpdmVudGlvbjogMi8yMDwvbGk+PGxpPkltcGFjdCBodW1haW46IDEwLzIwPC9saT48bGk+UsOpYWN0aXZpdMOpOiA0LzIwPC9saT48bGk+SW5mcmFzdHJ1Y3R1cmU6IDgvMjA8L2xpPjxsaT5IaXN0b3JpcXVlOiAxLzIwPC9saT48L3VsPgogICAgICA8c3Bhbj5Ob3RlIG1veWVubmUgOiA1LjAvMjA8L3NwYW4+PGJyPgogICAgICA8c3BhbiBzdHlsZT0iY29sb3I6cmVkOyBmb250LXdlaWdodDpib2xkOyI+8J+UtCBUcsOocyBwcm9iYWJsZTwvc3Bhbj4KICAgIDwvZGl2PgogICAg" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_569c94c2ba82eebba97e0a82a7a95b1e.setContent(i_frame_ef7ea5a5602f6d99d12eafa218989383);
+            
+        
+
+        marker_d99181e034ae5b9348955e0a2c9fafbf.bindPopup(popup_569c94c2ba82eebba97e0a82a7a95b1e)
+        ;
+
+        
+    
+    
+            marker_d99181e034ae5b9348955e0a2c9fafbf.bindTooltip(
+                `<div>
+                     Chute de météorite de Tcheliabinsk (2013)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_ab44eeeee4715543626687a8c3de061c = L.circle(
+                [55.1644, 61.4368],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_6b0b4a31fe8e7fb2acc46ed2fec1b8c8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7eac34554603fda0418b15f392042a13 = $(`<div id="html_7eac34554603fda0418b15f392042a13" style="width: 100.0%; height: 100.0%;">Chute de météorite de Tcheliabinsk (2013)</div>`)[0];
+                popup_6b0b4a31fe8e7fb2acc46ed2fec1b8c8.setContent(html_7eac34554603fda0418b15f392042a13);
+            
+        
+
+        circle_ab44eeeee4715543626687a8c3de061c.bindPopup(popup_6b0b4a31fe8e7fb2acc46ed2fec1b8c8)
+        ;
+
+        
+    
+    
+            var marker_8282c929f4efbd2d2d265d4d1154f3e6 = L.marker(
+                [-0.7893, 113.9213],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_e8e7f0d2b78acb4f126b49e5cbcd581a = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_2cf7d48dab306cdd1bda8e3ff23d580c = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+U8OpaXNtZSBkZSBTdW1hdHJhICgyMDA0KTwvc3Ryb25nPjxicj4KICAgICAgPGEgaHJlZj0iaHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMC5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjU1haTDhoVzliQllhOUpCUHlaVGJ5TEoyTWlCQ2JVY3BFVlJBJnMiIHRhcmdldD0iX2JsYW5rIj4KICAgICAgICA8aW1nIHNyYz0iaHR0cHM6Ly9lbmNyeXB0ZWQtdGJuMC5nc3RhdGljLmNvbS9pbWFnZXM/cT10Ym46QU5kOUdjU1haTDhoVzliQllhOUpCUHlaVGJ5TEoyTWlCQ2JVY3BFVlJBJnMiIHdpZHRoPSIxNTAiIHN0eWxlPSJib3JkZXI6MnB4IHNvbGlkIGJsYWNrOyI+CiAgICAgIDwvYT48YnI+CiAgICAgIDxzcGFuPkNyaXTDqHJlczo8L3NwYW4+PHVsIHN0eWxlPSdtYXJnaW46MDsgcGFkZGluZy1sZWZ0OjE1cHg7Jz48bGk+UHLDqXZlbnRpb246IDUvMjA8L2xpPjxsaT5JbXBhY3QgaHVtYWluOiA0LzIwPC9saT48bGk+UsOpYWN0aXZpdMOpOiA3LzIwPC9saT48bGk+SW5mcmFzdHJ1Y3R1cmU6IDYvMjA8L2xpPjxsaT5IaXN0b3JpcXVlOiAzLzIwPC9saT48L3VsPgogICAgICA8c3Bhbj5Ob3RlIG1veWVubmUgOiA1LjAvMjA8L3NwYW4+PGJyPgogICAgICA8c3BhbiBzdHlsZT0iY29sb3I6cmVkOyBmb250LXdlaWdodDpib2xkOyI+8J+UtCBUcsOocyBwcm9iYWJsZTwvc3Bhbj4KICAgIDwvZGl2PgogICAg" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_e8e7f0d2b78acb4f126b49e5cbcd581a.setContent(i_frame_2cf7d48dab306cdd1bda8e3ff23d580c);
+            
+        
+
+        marker_8282c929f4efbd2d2d265d4d1154f3e6.bindPopup(popup_e8e7f0d2b78acb4f126b49e5cbcd581a)
+        ;
+
+        
+    
+    
+            marker_8282c929f4efbd2d2d265d4d1154f3e6.bindTooltip(
+                `<div>
+                     Séisme de Sumatra (2004)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_e91e469cbb474017cf59ca587d906c3e = L.circle(
+                [-0.7893, 113.9213],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_90a22924763c0a82e593ad61358db066 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e0d50124d6f5f4489f9393511fcf85f = $(`<div id="html_0e0d50124d6f5f4489f9393511fcf85f" style="width: 100.0%; height: 100.0%;">Séisme de Sumatra (2004)</div>`)[0];
+                popup_90a22924763c0a82e593ad61358db066.setContent(html_0e0d50124d6f5f4489f9393511fcf85f);
+            
+        
+
+        circle_e91e469cbb474017cf59ca587d906c3e.bindPopup(popup_90a22924763c0a82e593ad61358db066)
+        ;
+
+        
+    
+    
+            var marker_bb649b3c82ccd4b007c2bd0a530439d7 = L.marker(
+                [63.6333, -19.6333],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_4452a529053fc116cc8654119a277473 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_6e728015332ae8a990e81b76d8511f42 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+w4lydXB0aW9uIGR1IHZvbGNhbiBFeWphZmphbGxhasO2a3VsbCAoMjAxMCk8L3N0cm9uZz48YnI+CiAgICAgIDxhIGhyZWY9Imh0dHBzOi8vaTAud3AuY29tL3d3dy5sYXRlcnJlZHVmdXR1ci5jb20vYWNjdWVpbC93cC1jb250ZW50L3VwbG9hZHMvMjAxNi8wNi9oZWtsYS12b2xjYW4taXNsYW5kZS5qcGc/Zml0PTYwMCUyQzMzOCZzc2w9MSIgdGFyZ2V0PSJfYmxhbmsiPgogICAgICAgIDxpbWcgc3JjPSJodHRwczovL2kwLndwLmNvbS93d3cubGF0ZXJyZWR1ZnV0dXIuY29tL2FjY3VlaWwvd3AtY29udGVudC91cGxvYWRzLzIwMTYvMDYvaGVrbGEtdm9sY2FuLWlzbGFuZGUuanBnP2ZpdD02MDAlMkMzMzgmc3NsPTEiIHdpZHRoPSIxNTAiIHN0eWxlPSJib3JkZXI6MnB4IHNvbGlkIGJsYWNrOyI+CiAgICAgIDwvYT48YnI+CiAgICAgIDxzcGFuPkNyaXTDqHJlczo8L3NwYW4+PHVsIHN0eWxlPSdtYXJnaW46MDsgcGFkZGluZy1sZWZ0OjE1cHg7Jz48bGk+UHLDqXZlbnRpb246IDYvMjA8L2xpPjxsaT5JbXBhY3QgaHVtYWluOiAzLzIwPC9saT48bGk+UsOpYWN0aXZpdMOpOiA4LzIwPC9saT48bGk+SW5mcmFzdHJ1Y3R1cmU6IDcvMjA8L2xpPjxsaT5IaXN0b3JpcXVlOiA1LzIwPC9saT48L3VsPgogICAgICA8c3Bhbj5Ob3RlIG1veWVubmUgOiA1LjgvMjA8L3NwYW4+PGJyPgogICAgICA8c3BhbiBzdHlsZT0iY29sb3I6b3JhbmdlOyBmb250LXdlaWdodDpib2xkOyI+8J+foCBQcm9iYWJsZTwvc3Bhbj4KICAgIDwvZGl2PgogICAg" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_4452a529053fc116cc8654119a277473.setContent(i_frame_6e728015332ae8a990e81b76d8511f42);
+            
+        
+
+        marker_bb649b3c82ccd4b007c2bd0a530439d7.bindPopup(popup_4452a529053fc116cc8654119a277473)
+        ;
+
+        
+    
+    
+            marker_bb649b3c82ccd4b007c2bd0a530439d7.bindTooltip(
+                `<div>
+                     Éruption du volcan Eyjafjallajökull (2010)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_12788a39a77819efad196a9e2a242667 = L.circle(
+                [63.6333, -19.6333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_f04e309ee513628d9346684523c27def = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c2151f84d438156fa954f8e133538711 = $(`<div id="html_c2151f84d438156fa954f8e133538711" style="width: 100.0%; height: 100.0%;">Éruption du volcan Eyjafjallajökull (2010)</div>`)[0];
+                popup_f04e309ee513628d9346684523c27def.setContent(html_c2151f84d438156fa954f8e133538711);
+            
+        
+
+        circle_12788a39a77819efad196a9e2a242667.bindPopup(popup_f04e309ee513628d9346684523c27def)
+        ;
+
+        
+    
+    
+            var marker_b32181c4a5d96636692cdda978481f76 = L.marker(
+                [37.75, 140.4675],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_df628546a0432ebfbf342c93106b5f33 = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_84551833f9371c6e740a4972de567e38 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+VHN1bmFtaSBkZSBGdWt1c2hpbWEgKDIwMTEpPC9zdHJvbmc+PGJyPgogICAgICA8YSBocmVmPSJodHRwczovL2VuY3J5cHRlZC10Ym4wLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NRZmdJS0JJZU0xVm1Ha0dJTHF3YUhHT3BMbmhDTFZyYjhUcGcmcyIgdGFyZ2V0PSJfYmxhbmsiPgogICAgICAgIDxpbWcgc3JjPSJodHRwczovL2VuY3J5cHRlZC10Ym4wLmdzdGF0aWMuY29tL2ltYWdlcz9xPXRibjpBTmQ5R2NRZmdJS0JJZU0xVm1Ha0dJTHF3YUhHT3BMbmhDTFZyYjhUcGcmcyIgd2lkdGg9IjE1MCIgc3R5bGU9ImJvcmRlcjoycHggc29saWQgYmxhY2s7Ij4KICAgICAgPC9hPjxicj4KICAgICAgPHNwYW4+Q3JpdMOocmVzOjwvc3Bhbj48dWwgc3R5bGU9J21hcmdpbjowOyBwYWRkaW5nLWxlZnQ6MTVweDsnPjxsaT5QcsOpdmVudGlvbjogMTAvMjA8L2xpPjxsaT5JbXBhY3QgaHVtYWluOiA0LzIwPC9saT48bGk+UsOpYWN0aXZpdMOpOiAxMi8yMDwvbGk+PGxpPkluZnJhc3RydWN0dXJlOiAxMy8yMDwvbGk+PGxpPkhpc3RvcmlxdWU6IDgvMjA8L2xpPjwvdWw+CiAgICAgIDxzcGFuPk5vdGUgbW95ZW5uZSA6IDkuNC8yMDwvc3Bhbj48YnI+CiAgICAgIDxzcGFuIHN0eWxlPSJjb2xvcjpvcmFuZ2U7IGZvbnQtd2VpZ2h0OmJvbGQ7Ij7wn5+gIFByb2JhYmxlPC9zcGFuPgogICAgPC9kaXY+CiAgICA=" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_df628546a0432ebfbf342c93106b5f33.setContent(i_frame_84551833f9371c6e740a4972de567e38);
+            
+        
+
+        marker_b32181c4a5d96636692cdda978481f76.bindPopup(popup_df628546a0432ebfbf342c93106b5f33)
+        ;
+
+        
+    
+    
+            marker_b32181c4a5d96636692cdda978481f76.bindTooltip(
+                `<div>
+                     Tsunami de Fukushima (2011)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_092848ca57472a1525bcf213a4e75e28 = L.circle(
+                [37.75, 140.4675],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_a8058220a6e085e6a772fe38e5b6a2b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5535c70b59b9169f48c8c0579be4420b = $(`<div id="html_5535c70b59b9169f48c8c0579be4420b" style="width: 100.0%; height: 100.0%;">Tsunami de Fukushima (2011)</div>`)[0];
+                popup_a8058220a6e085e6a772fe38e5b6a2b2.setContent(html_5535c70b59b9169f48c8c0579be4420b);
+            
+        
+
+        circle_092848ca57472a1525bcf213a4e75e28.bindPopup(popup_a8058220a6e085e6a772fe38e5b6a2b2)
+        ;
+
+        
+    
+    
+            var marker_31485e38d894c461a0b82d8d103eabf2 = L.marker(
+                [-22.9068, -43.1729],
+                {
+}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_ac0bcdb19ff41212f2f987ad1bca445f = L.popup({
+  "maxWidth": 265,
+});
+
+        
+            
+                var i_frame_d2480edbcc644e499d8e3ef62a738e77 = $(`<iframe src="data:text/html;charset=utf-8;base64,CiAgICAKICAgIDxkaXYgc3R5bGU9InRleHQtYWxpZ246Y2VudGVyOyI+CiAgICAgIDxzdHJvbmc+R2xpc3NlbWVudCBkZSB0ZXJyYWluIGF1IEJyw6lzaWwgKDIwMjQpPC9zdHJvbmc+PGJyPgogICAgICA8YSBocmVmPSJodHRwczovL2ltYWdlLmxlY291cnJpZXIudm4vTWVkaWFVcGxvYWQvT3JnLzIwMjQvMTAvMDkvMDgwNzI1LWFmcDIuanBnIiB0YXJnZXQ9Il9ibGFuayI+CiAgICAgICAgPGltZyBzcmM9Imh0dHBzOi8vaW1hZ2UubGVjb3Vycmllci52bi9NZWRpYVVwbG9hZC9PcmcvMjAyNC8xMC8wOS8wODA3MjUtYWZwMi5qcGciIHdpZHRoPSIxNTAiIHN0eWxlPSJib3JkZXI6MnB4IHNvbGlkIGJsYWNrOyI+CiAgICAgIDwvYT48YnI+CiAgICAgIDxzcGFuPkNyaXTDqHJlczo8L3NwYW4+PHVsIHN0eWxlPSdtYXJnaW46MDsgcGFkZGluZy1sZWZ0OjE1cHg7Jz48bGk+UHLDqXZlbnRpb246IDcvMjA8L2xpPjxsaT5JbXBhY3QgaHVtYWluOiA1LzIwPC9saT48bGk+UsOpYWN0aXZpdMOpOiA2LzIwPC9saT48bGk+SW5mcmFzdHJ1Y3R1cmU6IDYvMjA8L2xpPjxsaT5IaXN0b3JpcXVlOiA4LzIwPC9saT48L3VsPgogICAgICA8c3Bhbj5Ob3RlIG1veWVubmUgOiA2LjQvMjA8L3NwYW4+PGJyPgogICAgICA8c3BhbiBzdHlsZT0iY29sb3I6b3JhbmdlOyBmb250LXdlaWdodDpib2xkOyI+8J+foCBQcm9iYWJsZTwvc3Bhbj4KICAgIDwvZGl2PgogICAg" width="220" style="border:none !important;" height="300"></iframe>`)[0];
+                popup_ac0bcdb19ff41212f2f987ad1bca445f.setContent(i_frame_d2480edbcc644e499d8e3ef62a738e77);
+            
+        
+
+        marker_31485e38d894c461a0b82d8d103eabf2.bindPopup(popup_ac0bcdb19ff41212f2f987ad1bca445f)
+        ;
+
+        
+    
+    
+            marker_31485e38d894c461a0b82d8d103eabf2.bindTooltip(
+                `<div>
+                     Glissement de terrain au Brésil (2024)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_ca4c43797281a579f9ebd863fa815d11 = L.circle(
+                [-22.9068, -43.1729],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.4, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5000, "stroke": true, "weight": 3}
+            ).addTo(map_b226172e191df77f34943026a170f492);
+        
+    
+        var popup_c6db69b6938b203a6a5f7670c1eeb23b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e70c594dbc4c3c7be55d0b5c6c19d815 = $(`<div id="html_e70c594dbc4c3c7be55d0b5c6c19d815" style="width: 100.0%; height: 100.0%;">Glissement de terrain au Brésil (2024)</div>`)[0];
+                popup_c6db69b6938b203a6a5f7670c1eeb23b.setContent(html_e70c594dbc4c3c7be55d0b5c6c19d815);
+            
+        
+
+        circle_ca4c43797281a579f9ebd863fa815d11.bindPopup(popup_c6db69b6938b203a6a5f7670c1eeb23b)
+        ;
+
+        
+    
+</script>
+</html>
